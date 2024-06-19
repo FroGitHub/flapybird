@@ -1,7 +1,6 @@
 package org.example;
 
 
-
 public class Action_with_pine {
 
     public void create_pine(char[][] field, int top_pine){
@@ -25,21 +24,18 @@ public class Action_with_pine {
 
     }
 
-    public void print_field(char[][] field, int score){
+    public String print_field(char[][] field, int score){
         StringBuilder field_in_string = new StringBuilder("");
         for (int i = 0; i < field.length; i++){
             for (int j = 0; j < field[i].length - 3; j++) {
                 field_in_string.append(field[i][j]);
             }
             if (i != field.length - 1) {
-                field_in_string.append("\n");
+                field_in_string.append("<br>");
             }
         }
-
-        System.out.println("\n\n================================================");
-        System.out.print("\r" + field_in_string);
-        System.out.println("\n======================================Score: " + score);
-
+        field_in_string.append("<br>=================================|Score: " + score);
+        return "<html>" + field_in_string + "</html>";
     }
 
     public void move_field(char[][] field){

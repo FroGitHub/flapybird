@@ -1,23 +1,9 @@
 package org.example;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyPressDemo extends JFrame implements KeyListener {
-
-    private JPanel panel;
-
-    public KeyPressDemo() {
-        setTitle("Key Press");
-        setSize(1, 1);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        panel = new JPanel();
-        add(panel);
-        panel.setFocusable(true);
-        panel.addKeyListener(this);
-    }
 
     @Override
     public void keyTyped(KeyEvent e) {
